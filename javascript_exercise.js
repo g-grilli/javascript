@@ -220,6 +220,140 @@ function cipher(phrase, offset){
 cipher("you must unlearn what you have learned.", 13);
 cipher("whereismycoffee", 13);
 
+// Write a function leetspeak which is given a string, 
+// and returns the leetspeak equivalent of the string. 
+// To convert text to its leetspeak version, make the 
+// following substitutions:
+// A => 4
+// E => 3
+// G => 6
+// I => 1
+// O => 0
+// S => 5
+// T => 7
+function leetspeak(phrase) {
+	var leet = phrase.toUpperCase()
+	if (leet.includes('A')) {
+		leet = leet.replace('A', 4)
+	}
+	else if (leet.includes('E')) {
+		leet = leet.replace('E', 4)
+	}
+	else if (leet.includes('G')) {
+		leet = leet.replace('G', 4)
+	}
+	else if (leet.includes('I')) {
+		leet = leet.replace('I', 4)
+	}
+	else if (leet.includes('O')) {
+		leet = leet.replace('O', 4)
+	}
+	else if (leet.includes('S')) {
+		leet = leet.replace('S', 4)
+	}
+	else if (leet.includes('T')) {
+		leet = leet.replace('T', 4)
+	}
+	console.log(leet)
+
+
+// Write a function, which is given a string, return the result 
+// f extending any long vowels to the length of 5.
+
+function longLongVowels(word) {
+	if (word.includes('oo')) {
+		 word = word.replace('oo', 'ooooo')
+		 console.log(word);
+	}
+	else if (word.includes('ee')) {
+		 word = word.replace('ee', 'eeeee')
+		 console.log(word);
+	}
+	else {
+		console.log(word + " was not changed.");
+	}
+}
+
+// Write a function sumNumbers which is given an 
+// array of numbers and returns the sum of the numbers.
+function sumNumbers(nums) {
+	var value = nums.reduce(function(x, y) {
+		return x + y;
+	});
+	console.log(value)
+}
+sumNumbers([1, 4, 8]) // 1
+
+// Write a function positiveNumbers which is given an 
+// array of numbers and returns a new array containing 
+// only the positive numbers within the given array.
+function positiveNumbers(nums) {
+	newNums = []
+	for (var i = 0; i < nums.length; i++) {
+		if (nums[i] > 0) {
+			newNums.push(nums[i]);
+		}
+	}
+	console.log(newNums);
+}
+
+positiveNumbers([1,-3,5,-3,0])
+
+// Write a function matrixAdd which is given two two-dimensional
+// arrays, and returns a new two-dimensional array containing 
+// their matrix sum.
+function addMatrix (nums) {
+	var value = nums.reduce(function(x, y) {
+		return x + y;
+	});
+	console.log(value)
+}
+NOT FUNCTIONAL
+
+
+
+// Write a function matrixMultiply which is given two 
+// two-dimensional arrays - you can assume the matricies 
+// are of size 2x2. It will return the result of matrix 
+// multiplication between the two given matricies.
+function matrixMultiply (matrix) {
+
+}
+NOT FUNCTIONAL
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
