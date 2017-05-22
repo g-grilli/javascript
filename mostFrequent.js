@@ -1,4 +1,4 @@
-string = "to be or not to be";
+string = "to be or not to be is not or is not";
 
 function words(str) { 
     return str.split(" ").reduce(function(count, word) {
@@ -6,6 +6,7 @@ function words(str) {
       
       return count;
     }, {});
+
 }
 
 words(string); 
@@ -13,5 +14,5 @@ words(string);
 { to: 2, be: 2, or: 1, not: 1 }
 
 
-
+var best = words(string);
 
