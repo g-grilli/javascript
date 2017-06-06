@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{title}}</title>
+</head>
+<body>
+	<p>{{{content}}}</p>
+	<ol>
+		{{#each animals}}
+	    <li>
+	    {{# if favorite}}
+	    - {{name}}
+	    {{/if}}
+	    </li>
+	  	{{/each}}
+  	</ol>
+</body>
+</html>

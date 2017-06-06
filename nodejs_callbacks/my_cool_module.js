@@ -1,20 +1,33 @@
-var request = require('request');
 var fs = require('fs');
+var gm = require('gm');
+var async = require('async');
 
-function saveWebPage(url, filename, callback) {
-  request.get(url, function(err, response, html) {
+function createThumbNails(images, filename, callback) {
+  function resizeImage(filename, callback) {
+    gm(filename)
+      .resize(240, 240)
+      .write(filename, callback);
+  }
+
+  fs.readdir('images', function(err, files) {
     if (err) {
-      callback(err);
+      console.log(err.message);
       return;
     }
-    fs.writeFile(filename, html, function(err) {
+    console.log('before', files);
+    files = files.map(function(filename) {
+      return 'images/' + filename;
+    });
+    console.log('after', files);
+    async.each(files, resizeImage, function(err) {
       if (err) {
-        callback(err);
+        console.log(err.message);
         return;
       }
-      callback(null);
+      console.log('It worked.');
     });
-  });
+});
+
 }
 
-exports.saveWebPage = saveWebPage;
+exports.createThumbNails = createThumbNails;
