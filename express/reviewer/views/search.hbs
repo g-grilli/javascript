@@ -1,0 +1,17 @@
+<h2>SEARCH RESULTS</h2>
+<ul>
+  {{#each results}}
+  <li>
+   <a href="/restaurant/{{id}}">{{name}} / {{catagory}}</href>
+  </li>
+  {{/each}}
+</ul>
+
+
+<form method="GET" action="/search">
+  <label> Restaurant Search</label>
+  <input name="searchTerm">
+  <button type="submit">Search Again</button>
+ </form>
+
+ <br><br><br><a href="/restaurant/new"><button type="submit">Add New</button></a>

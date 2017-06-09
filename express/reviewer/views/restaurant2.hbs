@@ -1,0 +1,26 @@
+<h1>Restaurant</h1>
+
+<ul>
+  {{#each restaurants}}
+  <li>
+   <h3>{{name}}</h3> <h5>{{address}}</h5>
+  </li>
+  {{/each}}
+</ul>
+
+{{#each reviews}}
+<h2>{{title}}</h2>
+<h4>STARS {{stars}} / CATAGORY {{catagory}}</h4> 
+<p>{{review}}<p>
+{{/each}}
+
+<h3>Add your review</h3>
+<form action="/thanks" method="POST">
+	Name of Review:<br> 
+	<input name="title" ><br><br>
+	Number of Stars:<br> 
+	<input name="stars" type="number" min="0" max="5"><br><br>
+	Review:<br> 
+	<input name="review" maxlenght="256">
+	<button type="submit">Submit</button>
+</form>

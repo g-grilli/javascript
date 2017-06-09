@@ -62,7 +62,7 @@ app.get('/form', function(request, response) {
 
 app.post('/submit', function (request, response) {
   console.log(request.body);
-  response.redirect('/thnak-you');
+  response.redirect('/thank-you');
 });
 
 app.get('/thank-you', function (request, response) {

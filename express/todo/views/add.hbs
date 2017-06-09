@@ -1,0 +1,17 @@
+<h2>To Do List -ADD</h2>
+<ul>
+  {{#each results}}
+  <li>
+    {{id}}. {{description}} - {{done}}
+  </li>
+  {{/each}}
+</ul>
+<form method="POST" action="/todos/add">
+  <label>Add New Task</label>
+  <input name="add">
+  <button type="submit">ADD</button>
+ </form>
+
+ <a href="/todos"><button type="submit">TO DO LIST</button></a>
+
+<a href="/todos/done"><button type="submit">TASK COMPLETE</button></a>
