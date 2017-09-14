@@ -1,0 +1,20 @@
+#header {
+  color: #6c94be;
+}
+.bordered {
+  border-top: dotted 1px black;
+  border-bottom: solid 2px #5B83AD;
+}
+#menu a {
+  color: #111;
+  border-top: dotted 1px black;
+  border-bottom: solid 2px #5B83AD;
+}
+.post a {
+  color: red;
+  border-top: dotted 1px black;
+  border-bottom: solid 2px #5B83AD;
+}
+li {
+  color: #39618b;
+}

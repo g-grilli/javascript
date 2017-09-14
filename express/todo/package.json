@@ -8,8 +8,10 @@
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
     "hbs": "^4.0.1",
+    "less": "^2.7.2",
     "nodemon": "^1.11.0",
-    "pg-promise": "^5.9.0"
+    "pg-promise": "^5.9.0",
+    "watch-run": "^1.2.5"
   },
   "devDependencies": {},
   "scripts": {

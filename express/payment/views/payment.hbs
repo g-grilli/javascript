@@ -1,0 +1,48 @@
+<head>
+  <title>Payment</title>
+</head>
+<div class="container">
+  <h3>ScoreHoard Subscription</h3>
+  <div>
+    <p>You get 1 API call for free each day.<br>
+    After that, we prorate each additional call at a rate of $0.001 per call.<br>
+    The counter resets every day at midnight UTC.
+    As long as you make fewer than 1 call each day, the API is free.</p>
+  </div>
+  <div>
+    <p><strong>ScoreHoard</strong> also offers a monthly subscription.<br> You get 1,000 API calls per day.<br> After that, we prorate each additional call at a rate of $0.0001 per call.<br> The counter resets every day at midnight UTC. As long as you make fewer than 1,000 calls each day, the API is only $10.00.
+  </div>
+  <div>
+    <form action="/your-server-side-code" method="POST">
+      <script
+        src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh"
+        data-amount="1000"
+        data-name="ScoreHoard.com"
+        data-description="API Key"
+        data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+        data-locale="auto"
+        data-zip-code="true">
+      </script>
+    </form>
+  </div>
+</div>
+
+
+
+<script>
+Stripe.apiKey = "sk_test_BQokikJOvBiI2HlWgH4olfQ2";
+String token = request.getParameter("stripeToken");
+
+// Charge the user's card:
+Map<String, Object> params = new HashMap<String, Object>();
+params.put("amount", 1000);
+params.put("currency", "usd");
+params.put("description", "Example charge");
+params.put("source", token);
+
+Charge charge = Charge.create(params);
+</script>
+
+<script src="https://js.stripe.com/v3/"></script>
+
